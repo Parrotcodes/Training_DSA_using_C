@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
@@ -19,5 +20,7 @@ int main()
     getchar();
     printf("Enter your full name: ");
     fgets(name, sizeof(name), stdin);
+    name[strlen(name) - 1] = "\0";
+
     return 0;
 }
